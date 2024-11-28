@@ -52,8 +52,13 @@ print(a.version)
 ##### Ваша реализация кода:
 ```python
 class Test:
-    pass
+    version = 100
 
+test_instance = Test()
+
+version_value = getattr(test_instance,"version")
+
+print(verrsion_value)
 ```
 
 ---
