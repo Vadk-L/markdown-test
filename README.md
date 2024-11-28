@@ -54,11 +54,11 @@ print(a.version)
 class Test:
     version = 100
 
-test_instance = Test()
+ddk = Test()
 
-version_value = getattr(test_instance,"version")
+version_value = getattr(ddk, 'version')
 
-print(verrsion_value)
+print(version_value)
 ```
 
 ---
@@ -72,6 +72,19 @@ print(verrsion_value)
 ```python
 class Test:
     pass
+
+ddk = Test()
+
+setattr(ddk, 'version', 100)
+
+print("Значение атрибута version после добавления:", ddk.version)
+
+delattr(ddk, 'version')
+
+if hasattr(ddk, 'version'):
+    print("Атрибут version существует:", ddk.version)
+else:
+    print("Атрибут version был удален.")
 ```
 
 ---
